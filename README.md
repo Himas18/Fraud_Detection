@@ -4,6 +4,7 @@
 ![FastAPI](https://img.shields.io/badge/api-FastAPI-green)
 ![Streamlit](https://img.shields.io/badge/ui-Streamlit-orange)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 A complete end-to-end fraud detection pipeline that simulates transactional data, engineers meaningful features, trains multiple machine learning models with SMOTE balancing, and deploys real-time prediction APIs using **FastAPI** and an interactive **Streamlit** dashboard. SHAP is integrated for interpretability, enabling transparency into each prediction.
 
 # Tech Stack
