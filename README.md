@@ -11,13 +11,15 @@ A complete end-to-end fraud detection pipeline that simulates transactional data
 - Pandas, NumPy, Matplotlib, Seaborn for data handling & visualization
 
 # Project Structure
-fraud_detection/ 
+Fraud_Detection/ 
 ├── app.py                        # Streamlit frontend 
 ├── main.py                       # FastAPI backend 
 ├── fraud_detection_pipeline.py   # Data simulation + model training 
-├── random_forest_fraud_model.joblib 
+├── fraud_model.joblib 
 ├── raw_fraud_data.csv            # Simulated dataset 
 ├── requirements.txt 
+├── Dockerfile                    #Containerization Setup
+├── .dockerignore                 #Docker exclusions
 ├── README.md
 
 #  Features
@@ -40,10 +42,9 @@ SHAP is used to explain predictions on both individual and batch transactions:
 - For batch uploads: aggregated SHAP summary
 
 
-# Local Setup
+## 🧪 Local Setup
 
 1. Clone this repository
-
 bash
 git clone https://github.com/Himas18/Fraud_Detection.git
 cd Fraud_Detection
@@ -61,8 +62,20 @@ uvicorn main:app --reload
 5. Run the Streamlit frontend
 streamlit run app.py
 
-For batch predictions, upload the sample CSV
-Refer to `sample_test.csv` for the required input format in batch predictions.
+## 🐳 Run with Docker
+
+You can containerize and run the entire project with a single Docker command.
+
+1. Build the Docker image
+docker build -t fraud-detector .
+
+2. Run the container
+docker run -p 8000:8000 -p 8501:8501 fraud-detector
+
+• 	FastAPI API Docs → http://localhost:8000/docs
+• 	Streamlit Dashboard → http://localhost:8501
+
+For batch predictions, upload sample_test.csv in the Streamlit dashboard.
 
 # License
 This project is licensed under the MIT License.
