@@ -1,0 +1,4 @@
+amount,category,location,device,is_international,is_weekend,hour,is_late_night,is_business_hours,risk_device,risk_location,high_amount_flag,amount_zscore,amount_deviation_flag,user_transaction_freq,merchant_transaction_freq,risk_score
+4500,travel,urban,desktop,1,1,2,1,0,1,1,1,2.3,1,6,15,7
+900,food,suburban,mobile,0,0,13,0,1,0,0,0,-0.3,0,4,10,1
+2500,electronics,rural,tablet,0,1,23,1,0,0,0,1,1.7,0,9,20,3
