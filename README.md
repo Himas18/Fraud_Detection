@@ -65,6 +65,7 @@ streamlit run app.py
 ## 🐳 Run with Docker
 
 You can containerize and run the entire project with a single Docker command.
+Note: This app runs locally over http:// — make sure not to use https:// or the browser may block the connection.
 
 1. Build the Docker image
 docker build -t fraud-detector .
