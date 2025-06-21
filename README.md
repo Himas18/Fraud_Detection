@@ -7,6 +7,9 @@
 
 A complete end-to-end fraud detection pipeline that simulates transactional data, engineers meaningful features, trains multiple machine learning models with SMOTE balancing, and deploys real-time prediction APIs using **FastAPI** and an interactive **Streamlit** dashboard. SHAP is integrated for interpretability, enabling transparency into each prediction.
 
+Deployed seamlessly using Docker and hosted live via Render, ensuring scalable and containerized delivery of both frontend and backend services in a single environment.
+
+
 # Tech Stack
 - Python 3.10
 - FastAPI + Streamlit for backend and UI
@@ -37,6 +40,7 @@ Fraud_Detection/
 - REST endpoints for both single and batch predictions
 - SHAP summary plots for feature contribution analysis
 - Streamlit UI for interactive predictions and uploads
+- Docker + Render deployment in a single unified container
 
 
 # 📈 SHAP Visualizations
@@ -82,6 +86,12 @@ docker run -p 8000:8000 -p 8501:8501 fraud-detector
 • 	Streamlit Dashboard → http://localhost:8501
 
 For batch predictions, upload sample_test.csv in the Streamlit dashboard.
+
+## 🧪 Live Deployment (Render)
+This project is deployed live using Render, with both FastAPI and Streamlit running inside a single container.
+- Streamlit is served as the primary interface
+- FastAPI handles predictions behind the scenes within the container
+🚀 Live demo → fraud-detection-api-xr2k.onrender.com
 
 # License
 This project is licensed under the MIT License.
